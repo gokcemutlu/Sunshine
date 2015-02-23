@@ -12,7 +12,5 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:id="@+id/listview_forecast"
-        android:layout_gravity="left|bottom">
-
-        </ListView>
+        android:layout_gravity="center_horizontal|top" />
 </FrameLayout>
