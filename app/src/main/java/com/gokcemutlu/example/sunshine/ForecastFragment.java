@@ -81,6 +81,8 @@ public class ForecastFragment extends Fragment {
 
         //noinspection SimplifiableIfStatement
         if (id == R.id.action_refresh) {
+            FetchWeatherTask task = new FetchWeatherTask();
+            task.execute();
             return true;
         }
 
