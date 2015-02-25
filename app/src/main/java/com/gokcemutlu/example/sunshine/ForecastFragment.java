@@ -61,7 +61,7 @@ public class ForecastFragment extends Fragment {
 
                 Intent intent = new Intent(getActivity(), DetailActivity.class);
                 ArrayAdapter forecast = mForecastAdapter;
-                intent.putExtra("1_day_weather", forecast.getItem(position).toString());
+                intent.putExtra(Intent.EXTRA_TEXT, forecast.getItem(position).toString());
                 startActivity(intent);
             }
         });
