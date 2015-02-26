@@ -92,18 +92,22 @@ public class ForecastFragment extends Fragment {
 
         //noinspection SimplifiableIfStatement
         if (id == R.id.action_refresh) {
-            String locationKey = getActivity().getResources().getString(R.string.pref_location_key);
-            String defaultLocation = getActivity().getResources().getString(R.string.pref_location_default);
-
-            SharedPreferences prefs = PreferenceManager.getDefaultSharedPreferences(getActivity());
-            String location = prefs.getString(locationKey, defaultLocation);
-
-            FetchWeatherTask task = new FetchWeatherTask();
-            task.execute(location);
+            updateWeather();
             return true;
         }
 
         return super.onOptionsItemSelected(item);
+    }
+
+    private void updateWeather() {
+        String locationKey = getActivity().getResources().getString(R.string.pref_location_key);
+        String defaultLocation = getActivity().getResources().getString(R.string.pref_location_default);
+
+        SharedPreferences prefs = PreferenceManager.getDefaultSharedPreferences(getActivity());
+        String location = prefs.getString(locationKey, defaultLocation);
+
+        FetchWeatherTask task = new FetchWeatherTask();
+        task.execute(location);
     }
 
     public class FetchWeatherTask extends AsyncTask<String, Void, String[]>
