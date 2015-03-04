@@ -37,6 +37,7 @@ public class ForecastFragment extends Fragment {
     ArrayAdapter<String> mForecastAdapter;
 
     public ForecastFragment() {
+        setHasOptionsMenu(true);
     }
 
     @Override
