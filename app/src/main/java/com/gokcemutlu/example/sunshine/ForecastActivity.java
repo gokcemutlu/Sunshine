@@ -11,8 +11,8 @@ import android.view.Menu;
 import android.view.MenuItem;
 
 
-public class MainActivity extends ActionBarActivity {
-    private final String LOG_TAG = MainActivity.class.getSimpleName();
+public class ForecastActivity extends ActionBarActivity {
+    private final String LOG_TAG = ForecastActivity.class.getSimpleName();
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
