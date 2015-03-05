@@ -18,13 +18,6 @@ package com.gokcemutlu.example.sunshine.data;
 
 import android.provider.BaseColumns;
 
-import android.content.ContentUris;
-import android.net.Uri;
-import android.provider.BaseColumns;
-import java.text.ParseException;
-import java.text.SimpleDateFormat;
-import java.util.Date;
-
 /**
  * Defines table and column names for the weather database.
  */
@@ -101,7 +94,7 @@ public class WeatherContract {
     public static final class LocationEntry implements BaseColumns {
         public static final String TABLE_NAME = "location";
 
-        public static final String COLUMN_LOC_SETTING = "location_setting";
+        public static final String COLUMN_LOCATION_SETTING = "location_setting";
 
         public static final String COLUMN_CITY_NAME = "city_name";
 
