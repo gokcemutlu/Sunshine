@@ -10,7 +10,6 @@ import android.util.Log;
 import android.view.Menu;
 import android.view.MenuItem;
 
-
 public class ForecastActivity extends ActionBarActivity {
     private final String LOG_TAG = ForecastActivity.class.getSimpleName();
 
