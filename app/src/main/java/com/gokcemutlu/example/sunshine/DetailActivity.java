@@ -13,7 +13,6 @@ import android.view.MenuInflater;
 import android.view.MenuItem;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.TextView;
 
 
 public class DetailActivity extends ActionBarActivity {
@@ -51,12 +50,8 @@ public class DetailActivity extends ActionBarActivity {
             View rootView = inflater.inflate(R.layout.fragment_detail, container, false);
 
             Intent intent = getActivity().getIntent();
-            if (intent != null && intent.hasExtra(Intent.EXTRA_TEXT))
-            {
-                TextView textViewOneDayForecast =
-                        (TextView)rootView.findViewById(R.id.textview_onedayforecast);
-                mForecastStr = intent.getStringExtra(Intent.EXTRA_TEXT);
-                textViewOneDayForecast.setText(mForecastStr);
+            if (intent != null) {
+                mForecastStr = intent.getDataString();
             }
 
             return rootView;
