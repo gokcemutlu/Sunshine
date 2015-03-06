@@ -1,10 +1,8 @@
 package com.gokcemutlu.example.sunshine;
 
 import android.content.Intent;
-import android.content.SharedPreferences;
 import android.net.Uri;
 import android.os.Bundle;
-import android.preference.PreferenceManager;
 import android.support.v7.app.ActionBarActivity;
 import android.util.Log;
 import android.view.Menu;
@@ -83,9 +81,7 @@ public class ForecastActivity extends ActionBarActivity {
     }
 
     private void openPreferredLocationInMap() {
-        SharedPreferences prefs = PreferenceManager.getDefaultSharedPreferences(this);
-        String preferredLocation = prefs.getString(getString(R.string.pref_location_key),
-                getString(R.string.pref_location_default));
+        String preferredLocation = Utility.getPreferredLocation(this);
 
         Uri geoLocation = Uri.parse("geo:0,0?").buildUpon()
                 .appendQueryParameter("q", preferredLocation).build();
